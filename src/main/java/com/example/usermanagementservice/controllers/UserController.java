@@ -67,6 +67,7 @@ public class UserController {
         return UserDto.from(userService.validateToken(tokenValue));
     }
 
+    //endpoint for testing client-based loadBalancing...
     @GetMapping("/{userId}")
     public String getUserDetails(@PathVariable("userId") Long userId) {
         System.out.println("Received the request for userDetails");
